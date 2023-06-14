@@ -26,6 +26,8 @@ public class SpreadShoot : Ability
     private bool _canPenetrate;
     [SerializeField]
     private float _bulletLife;
+    [SerializeField]
+    private float _angleBerweenBullets;
 
     private ReloadTimer _reloadTimer;
     public override void Instantiate(Unit unit)
@@ -43,11 +45,11 @@ public class SpreadShoot : Ability
                 Quaternion angle = _caster.transform.rotation;
                 if (_numberOfShoots % 2 == 0)
                 {
-                    angle = Quaternion.Euler(0, 0, (i - (_numberOfShoots / 2 - 0.5f)) * 15f);
+                    angle = Quaternion.Euler(0, 0, (i - (_numberOfShoots / 2 - 0.5f)) * _angleBerweenBullets);
                 }
                 else
                 {
-                    angle = Quaternion.Euler(0, 0, (i - _numberOfShoots / 2) * 15f);
+                    angle = Quaternion.Euler(0, 0, (i - _numberOfShoots / 2) * _angleBerweenBullets);
                 }
                 Missle obj = Instantiate(_bulletPrefab, _caster.transform.position, angle * _caster.transform.rotation);
                 obj.Initialize(_caster, _damage, _bulletLife);

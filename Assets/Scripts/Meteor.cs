@@ -3,10 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Meteor : Unit
-{
+{ 
     [SerializeField][Range(0f, 15f)]
     private float _speed;
     private Rigidbody2D _rb;
+
+    [SerializeField]
+    private float _damage;
+
     public void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -30,8 +34,16 @@ public class Meteor : Unit
         }
     }
 
-    public void OnDestroy()
+
+
+    public void OnTriggerEnter2D(Collider2D other)
     {
-        Score.OnScoreAdded?.Invoke(25);
+        Unit unit = other.GetComponent<Unit>();
+        if (unit && unit.Side != Side)
+        {
+            unit.TakeDamage(_damage);
+            Destroy(gameObject);
+        }
     }
+    
 }

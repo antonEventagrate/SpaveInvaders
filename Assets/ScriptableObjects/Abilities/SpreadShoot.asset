@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _reloadTime: 1
   _bulletPrefab: {fileID: 4731325997782274417, guid: 56967aa49756a5a49b06795e172f57f4, type: 3}
-  _numberOfShoots: 5
-  _damage: 1
+  _numberOfShoots: 24
+  _damage: 5
   _speed: 3
   _canPenetrate: 0
   _bulletLife: 3
+  _angleBerweenBullets: 15

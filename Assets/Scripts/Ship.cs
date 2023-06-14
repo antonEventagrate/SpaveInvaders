@@ -17,6 +17,7 @@ public class Ship : Unit
     {
         _rb = GetComponent<Rigidbody2D>();
         Ability.Instantiate(this);
+        _currentHelath = _maxHealth;
     }
     public void ChangeMainAbility(Ability ability)
     {
