@@ -20,8 +20,6 @@ public class SimpleShoot : Ability
     [SerializeField]
     private float _speed;
     [SerializeField]
-    private bool _canPenetrate;
-    [SerializeField]
     private float _bulletLife;
   
     private ReloadTimer _reloadTimer;

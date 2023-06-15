@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aac847eabd6be554ea0028bfdade8ac9, type: 3}
   m_Name: SimpleShoot
   m_EditorClassIdentifier: 
-  _reloadTime: 0.25
-  _bulletPrefab: {fileID: 4731325997782274417, guid: 56967aa49756a5a49b06795e172f57f4, type: 3}
+  _reloadTime: 0.5
+  _bulletPrefab: {fileID: 4731325997782274417, guid: 65ca31dd6f3d9cb49a6f11a4d680a540, type: 3}
   _damage: 10
   _speed: 6
   _canPenetrate: 0

@@ -16,5 +16,4 @@ MonoBehaviour:
   _bulletPrefab: {fileID: 4437682656848022489, guid: 3ae01915816ec97488a9d89e2ae86b5d, type: 3}
   _damage: 0.01
   _speed: 0
-  _canPenetrate: 0
   _bulletLife: 0.02

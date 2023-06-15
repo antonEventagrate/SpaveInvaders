@@ -29,7 +29,7 @@ public class Beam : Missle
         }
 
 
-        _line.SetPosition(1, new Vector3(0, 50, -0.5f));
+        //_line.SetPosition(1, new Vector3(0, 50, -0.5f));
         if (_caster)
         {
             transform.position = _caster.transform.position;
@@ -44,7 +44,7 @@ public class Beam : Missle
                 if (obj.Side != _caster.Side)
                 {
                     obj.TakeDamage(_damage);
-                    _line.SetPosition(1, new Vector3(0, hit.distance, -0.5f));
+                    //_line.SetPosition(1, new Vector3(0, hit.distance, -0.5f));
                 }
             }
         }

@@ -23,8 +23,6 @@ public class SpreadShoot : Ability
     [SerializeField]
     private float _speed;
     [SerializeField]
-    private bool _canPenetrate;
-    [SerializeField]
     private float _bulletLife;
     [SerializeField]
     private float _angleBerweenBullets;
